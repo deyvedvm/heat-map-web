@@ -1,7 +1,7 @@
 import React, {FormEvent, useState} from 'react';
 
-import {LatLng, LatLngTuple} from "leaflet";
-import {MapContainer, Marker, Popup, TileLayer, useMapEvents} from 'react-leaflet'
+import {LatLng} from "leaflet";
+import {MapContainer, Marker, Popup, TileLayer} from 'react-leaflet'
 
 import {useFetch} from "./hooks/useFetch";
 
@@ -22,7 +22,7 @@ function App() {
 
     const url = process.env.REACT_APP_BASE_URL || 'http://localhost:8080/residences';
 
-    const [location, setLocation] = useState<LatLng>(initialPosition);
+    const [location] = useState<LatLng>(initialPosition);
 
     const [houseNumber, setHouseNumber] = useState("");
 
