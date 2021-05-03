@@ -61,6 +61,8 @@ function App() {
     async function handleSubmit(event: FormEvent) {
         event.preventDefault();
 
+        if (!houseNumber || !zipCode || !numberResidents || !latitude || !longitude ) return;
+
         console.log(event);
 
         const residence: Residence = {
